@@ -1,0 +1,231 @@
+/* ================================================================
+   Mark Anthony Home Improvement — mobile.css
+   Breakpoints: 768px (tablet), 480px (phone)
+   Add to index.html after style.css:
+   <link rel="stylesheet" href="mobile.css">
+================================================================ */
+
+@media (max-width: 768px) {
+
+  /* ── NAV ── */
+  nav {
+    padding: .9rem 1.25rem;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-cta {
+    font-size: 12px;
+    padding: .45rem 1.1rem;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    max-height: none;
+    min-height: 100svh;
+  }
+  .hero-overlay {
+    background: linear-gradient(to bottom, rgba(26,20,16,.75) 0%, rgba(26,20,16,.55) 100%);
+  }
+  .hero-content {
+    padding: 0 1.5rem;
+    max-width: 100%;
+    justify-content: flex-end;
+    padding-bottom: 3.5rem;
+  }
+  .hero-h1 {
+    font-size: clamp(42px, 11vw, 62px);
+  }
+  .hero-sub {
+    font-size: 15px;
+    max-width: 100%;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .hero-scroll {
+    display: none;
+  }
+
+  /* ── INTAKE FORM ── */
+  .intake {
+    padding: 3.5rem 1.5rem;
+  }
+  .intake-inner {
+    max-width: 100%;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: .65rem;
+  }
+  .intake-title {
+    font-size: clamp(24px, 7vw, 34px);
+  }
+
+  /* ── ABOUT ── */
+  .about-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .about-img {
+    height: 65vw;
+    min-height: 280px;
+    max-height: 420px;
+  }
+  .about-img img {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+  .about-right {
+    padding: 2.5rem 1.5rem;
+  }
+  .h2 {
+    font-size: clamp(30px, 8vw, 44px);
+  }
+  .about-body {
+    font-size: 15px;
+  }
+
+  /* ── STATS BAND ── */
+  .stats-band {
+    padding: 3rem 1.5rem;
+  }
+  .stats-inner {
+    gap: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .stat-num {
+    font-size: clamp(36px, 10vw, 56px);
+  }
+  .stat-lbl {
+    font-size: 11px;
+    letter-spacing: .1em;
+  }
+
+  /* ── GALLERY / SLIDESHOW ── */
+  .gallery-header {
+    padding: 3rem 1.5rem 1.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .slideshow {
+    height: 70vw;
+    min-height: 280px;
+    max-height: 480px;
+  }
+  .slide-label {
+    padding: 1rem 1.25rem;
+  }
+  .slide-name {
+    font-size: 16px;
+  }
+  .slide-controls {
+    bottom: 1rem;
+    right: 1.25rem;
+    gap: .75rem;
+  }
+  .sarr {
+    width: 36px;
+    height: 36px;
+  }
+  .slide-count {
+    display: none;
+  }
+
+  /* ── SERVICES ── */
+  .services {
+    padding: 3.5rem 1.5rem;
+  }
+  .svc-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+  }
+  .svc-grid {
+    grid-template-columns: 1fr;
+  }
+  .svc {
+    padding: 1.5rem 0;
+    border-right: none;
+    border-bottom: 1px solid var(--fog);
+  }
+  .svc:nth-child(3n) {
+    border-right: none;
+  }
+  .svc:nth-child(n+4) {
+    margin-top: 0;
+    padding-top: 1.5rem;
+    border-top: none;
+  }
+  .svc:last-child {
+    border-bottom: none;
+  }
+
+  /* ── CONTACT ── */
+  .contact {
+    padding: 3.5rem 1.5rem;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .contact-intro {
+    max-width: 100%;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 2rem 1.5rem;
+  }
+  .foot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .75rem;
+  }
+  .foot-links {
+    gap: 1.25rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  /* ── NAV ── */
+  .nav-cta {
+    display: none;
+  }
+
+  /* ── STATS ── */
+  .stats-inner {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+  .stat-item + .stat-item::before {
+    display: none;
+  }
+  .stat-num {
+    font-size: clamp(48px, 14vw, 64px);
+  }
+
+  /* ── FORM rows ── */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── HERO ── */
+  .hero-h1 {
+    font-size: clamp(38px, 12vw, 52px);
+  }
+
+  /* ── SERVICES ── */
+  .svc-name {
+    font-size: 20px;
+  }
+
+}
