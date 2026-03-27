@@ -6,15 +6,15 @@
 
 :root {
   --bg:    #f2ede4;
-  --bg2:   #ede7dd;
+  --bg2:   #f4ecde;
   --white: #ffffff;
   --ink:   #1a1410;
   --ink2:  #2c2418;
-  --terra: #8b3a2a;
-  --terra2:#a54432;
-  --gold:  #c0a882;
-  --mist:  #a08a6a;
-  --fog:   #d4c8b0;
+  --terra: #764d06;
+  --terra2:#b25411;
+  --gold:  #f0c277;
+  --mist:  #a28b6a;
+  --fog:   #e3d7bf;
   --lt:    #e8e0d0;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -23,10 +23,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);over
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 2.5rem;background:var(--ink)}
-.nav-logo{font-family:'Fraunces',serif;font-size:17px;font-weight:300;color:var(--bg);letter-spacing:.01em}
+.nav-logo{font-family:'Fraunces',serif;font-size:28px;font-weight:300;color:var(--bg);letter-spacing:.01em}
 .nav-logo em{font-style:italic;color:var(--terra)}
 .nav-links{display:flex;gap:2rem}
-.nav-links a{font-size:12px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:rgba(242,237,228,.4);text-decoration:none;transition:color .2s}
+.nav-links a{font-size:14px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:rgba(242,237,228,.4);text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:var(--bg)}
 .nav-cta{font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--bg);padding:.55rem 1.5rem;text-decoration:none;border-radius:10px;transition:background .2s}
 .nav-cta:hover{background:var(--fog)}
@@ -70,7 +70,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .lead{font-size:16px;font-weight:300;line-height:1.85;color:var(--mist);max-width:500px}
 
 /* ── 2. ABOUT — full-width 2-col, image fills left ── */
-.about{background:var(--white);border-top:1px solid var(--lt)}
+.about{background:var(--white);border-top:0 solid var(--lt)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;min-height:700px}
 .about-img{overflow:hidden;position:relative}
 .about-img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:brightness(.94)}
@@ -153,7 +153,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 /* FOOTER */
 footer{background:var(--ink);padding:2.5rem;border-top:1px solid rgba(255,255,255,.05)}
 .foot{max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.foot-logo{font-family:'Fraunces',serif;font-size:16px;font-weight:300;color:var(--bg)}
+.foot-logo{font-family:'Fraunces',serif;font-size:21px;font-weight:300;color:var(--bg)}
 .foot-logo em{font-style:italic;color:var(--terra)}
 .foot-links{display:flex;gap:1.75rem}
 .foot-links a{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(242,237,228,.3);text-decoration:none;transition:color .2s}
