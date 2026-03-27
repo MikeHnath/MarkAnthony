@@ -1,37 +1,13 @@
 /* ================================================================
    Mark Anthony Home Improvement — mobile.css
    Breakpoints: 1024px (tablet), 768px (mobile), 480px (small phone)
-   Add to index.html <head> after style.css:
-   <link rel="stylesheet" href="mobile.css">
 ================================================================ */
 
-
-/* ── HAMBURGER BUTTON + OVERLAY MENU (all sizes) ──────────────── */
+/* ── HAMBURGER + MOBILE MENU — hidden on desktop by default ───── */
 
 .nav-hamburger {
   display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 36px;
-  height: 36px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  z-index: 300;
 }
-.nav-hamburger span {
-  display: block;
-  width: 100%;
-  height: 1.5px;
-  background: var(--bg);
-  transition: transform .3s ease, opacity .3s ease;
-  transform-origin: center;
-}
-.nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-.nav-hamburger.open span:nth-child(2) { opacity: 0; }
-.nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
 .nav-mobile-menu {
   display: none;
@@ -44,14 +20,29 @@
   justify-content: center;
   gap: 2.5rem;
 }
-.nav-mobile-menu.open { display: flex; }
+
+.nav-mobile-menu.open {
+  display: flex;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--bg);
+  transition: transform .3s ease, opacity .3s ease;
+  transform-origin: center;
+}
+
+.nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
 .nav-mobile-menu a {
   font-family: 'Fraunces', serif;
   font-style: italic;
   font-size: 32px;
   font-weight: 300;
-  letter-spacing: .04em;
   color: var(--bg);
   text-decoration: none;
   transition: color .2s;
@@ -70,7 +61,6 @@
   border-radius: 10px;
   margin-top: .75rem;
 }
-.nav-mobile-cta:hover { background: var(--fog) !important; }
 
 .nav-mobile-close {
   position: absolute;
@@ -83,6 +73,11 @@
   cursor: pointer;
   line-height: 1;
   padding: 0;
+  display: none;
+}
+
+.nav-mobile-menu.open .nav-mobile-close {
+  display: block;
 }
 
 
@@ -90,9 +85,21 @@
 
 @media (max-width: 1024px) {
 
-  .nav-links    { display: none; }
-  .nav-cta      { display: none !important; }
-  .nav-hamburger { display: flex; }
+  .nav-links     { display: none; }
+  .nav-cta       { display: none !important; }
+  .nav-hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 300;
+  }
 
   /* Services: 3 → 2 columns */
   .svc-grid { grid-template-columns: 1fr 1fr; }
@@ -101,12 +108,8 @@
     border-right: 1px solid var(--fog);
     padding: 1.75rem 1.75rem 1.75rem 0;
   }
-
-  /* clear desktop 3-col nth rules */
   .svc:nth-child(3n)  { border-right: 1px solid var(--fog); padding-right: 1.75rem; }
   .svc:nth-child(n+4) { border-top: none; margin-top: 0; padding-top: 1.75rem; }
-
-  /* 2-col rules */
   .svc:nth-child(2n)  { border-right: none; padding-right: 0; }
   .svc:nth-child(n+3) { border-top: 1px solid var(--fog); margin-top: 1.75rem; padding-top: 1.75rem; }
 }
@@ -118,7 +121,6 @@
 
   nav { padding: .9rem 1.25rem; }
 
-  /* Hero */
   .hero         { max-height: none; min-height: 100svh; }
   .hero-overlay { background: linear-gradient(to bottom, rgba(26,20,16,.78) 0%, rgba(26,20,16,.62) 100%); }
   .hero-content { padding: 0 1.5rem 3.5rem; max-width: 100%; justify-content: flex-end; }
@@ -127,34 +129,22 @@
   .hero-actions { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .hero-scroll  { display: none; }
 
-  /* Intake form */
   .intake       { padding: 3.5rem 1.5rem; }
   .intake-inner { max-width: 100%; }
   .intake-title { font-size: clamp(24px, 7vw, 34px); }
   .form-row     { grid-template-columns: 1fr; gap: .65rem; }
 
-  /* About: stack, image on top */
-  .about-grid {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-  .about-img {
-    order: 1;
-    height: 72vw;
-    min-height: 260px;
-    max-height: 420px;
-  }
+  .about-grid   { grid-template-columns: 1fr; min-height: auto; }
+  .about-img    { order: 1; height: 72vw; min-height: 260px; max-height: 420px; }
   .about-img img { aspect-ratio: auto; width: 100%; height: 100%; }
   .about-right  { order: 2; padding: 2.5rem 1.5rem; }
   .h2           { font-size: clamp(28px, 8vw, 42px); }
   .about-body   { font-size: 15px; }
 
-  /* Stats band */
   .stats-band   { padding: 3rem 1.5rem; }
   .stat-num     { font-size: clamp(38px, 10vw, 56px); }
   .stat-lbl     { font-size: 11px; }
 
-  /* Gallery */
   .gallery-header { padding: 3rem 1.5rem 1.75rem; flex-direction: column; align-items: flex-start; gap: 1rem; }
   .slideshow      { height: 72vw; min-height: 280px; max-height: 480px; }
   .slide-label    { padding: 1rem 1.25rem; }
@@ -163,7 +153,6 @@
   .sarr           { width: 36px; height: 36px; }
   .slide-count    { display: none; }
 
-  /* Services: 1 column */
   .svc-grid { grid-template-columns: 1fr; }
   .svc {
     border-right: none !important;
@@ -176,14 +165,12 @@
   .services       { padding: 3.5rem 1.5rem; }
   .svc-header     { flex-direction: column; align-items: flex-start; margin-bottom: 2rem; }
 
-  /* Contact: 1 column */
   .contact        { padding: 3.5rem 1.5rem; }
   .contact-grid   { grid-template-columns: 1fr; gap: 3rem; }
   .contact-intro  { max-width: 100%; }
 
-  /* Footer */
-  footer     { padding: 2rem 1.5rem; }
-  .foot      { flex-direction: column; align-items: flex-start; gap: .75rem; }
+  footer      { padding: 2rem 1.5rem; }
+  .foot       { flex-direction: column; align-items: flex-start; gap: .75rem; }
   .foot-links { gap: 1.25rem; }
 }
 
@@ -191,7 +178,6 @@
 /* ── SMALL PHONE — 480px ─────────────────────────────────────── */
 
 @media (max-width: 480px) {
-
   .hero-h1  { font-size: clamp(36px, 12vw, 50px); }
 
   .stats-inner {
