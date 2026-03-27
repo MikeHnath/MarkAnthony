@@ -91,7 +91,7 @@
 @media (max-width: 1024px) {
 
   .nav-links    { display: none; }
-  .nav-cta      { display: none; }
+  .nav-cta      { display: none !important; }
   .nav-hamburger { display: flex; }
 
   /* Services: 3 → 2 columns */

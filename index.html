@@ -17,12 +17,26 @@
   <div class="nav-logo">Mark <em>Anthony</em></div>
   <div class="nav-links">
     <a href="#about">About</a>
-    <a href="#services">Services</a>
     <a href="#work">Work</a>
+    <a href="#services">Services</a>
     <a href="#contact">Contact</a>
   </div>
   <a href="#contact" class="nav-cta">Get a Quote</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
+
+<div class="nav-mobile-menu" id="mobileMenu">
+  <button class="nav-mobile-close" id="menuClose" aria-label="Close menu">&times;</button>
+  <a href="#about"    onclick="closeMenu()">About</a>
+  <a href="#work"     onclick="closeMenu()">Work</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#contact"  onclick="closeMenu()">Contact</a>
+  <a href="#contact"  class="nav-mobile-cta" onclick="closeMenu()">Get a Quote</a>
+</div>
 
 <!-- HERO -->
 <section class="hero" id="home">
@@ -235,6 +249,33 @@
 </footer>
 
 <script src="main.js"></script>
-<script src="hamburger.js"></script>  
+
+<script>
+const hamburger  = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const menuClose  = document.getElementById('menuClose');
+
+function openMenu() {
+  hamburger.classList.add('open');
+  mobileMenu.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+  hamburger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+hamburger.addEventListener('click', function() {
+  mobileMenu.classList.contains('open') ? closeMenu() : openMenu();
+});
+
+menuClose.addEventListener('click', closeMenu);
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeMenu();
+});
+</script>
 </body>
 </html>
