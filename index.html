@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mark Anthony Home Improvement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Mark <em>Anthony</em></div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#contact" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-video">
+    <video autoplay muted loop playsinline>
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">New Haven &amp; Fairfield County, CT</div>
+    <h1 class="hero-h1">The detail is <br><em>the</em> difference.</h1>
+    <p class="hero-sub">Kitchens, bathrooms, decks, basements, and commercial work. Built by hand. Done right.</p>
+    <div class="hero-actions">
+      <a href="#intake" class="btn-solid">Get a free quote</a>
+      <a href="#work" class="btn-ghost-light">
+        See the work
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-bar"></div>
+    Scroll
+  </div>
+</section>
+
+<!-- 2. ABOUT — full-width 2-col, image fills left column -->
+<section class="about" id="about">
+  <div class="about-grid reveal">
+    <div class="about-img">
+      <img src="assets/precision-craftsmanship-mark-anthony.jpg" alt="Precision craftsmanship — Mark Anthony">
+    </div>
+    <div class="about-right">
+      <div class="eyebrow">About</div>
+      <h2 class="h2">One crew.<br><em>No shortcuts.</em></h2>
+      <div class="about-body">
+        <p>Mark Anthony Home Improvement is a one-man operation — and that's by design. Every project gets Mark's direct attention from the first walkthrough to the final detail. No subcontractors passing the buck. No crew you've never met showing up at your door.</p>
+        <p>With years of hands-on experience across New Haven and Fairfield County, Mark has built a reputation on the kind of work that holds up — and the kind of honesty homeowners and businesses remember. Fairly priced. Always accountable.</p>
+      </div>
+      <div class="about-sig">— Mark Menillo</div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. STATS BAND — dark terra background -->
+<section class="stats-band">
+  <div class="stats-inner reveal">
+    <div class="stat-item">
+      <div class="stat-num">20+</div>
+      <div class="stat-lbl">Years experience</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">200+</div>
+      <div class="stat-lbl">Projects completed</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">2</div>
+      <div class="stat-lbl">Counties served</div>
+    </div>
+  </div>
+</section>
+
+<!-- 1. INTAKE FORM — own row, centered, 800px -->
+<section class="intake" id="intake">
+  <div class="intake-inner reveal">
+    <div class="intake-head">
+      <div class="intake-title">Request a <em>Free Quote</em></div>
+      <div class="intake-sub">We'll get back to you within 24 hours. No obligation, no pressure.</div>
+    </div>
+    <form onsubmit="return false">
+      <div class="form-row">
+        <div class="fg"><label>First name</label><input type="text" placeholder="John"></div>
+        <div class="fg"><label>Last name</label><input type="text" placeholder="Smith"></div>
+      </div>
+      <div class="form-row">
+        <div class="fg"><label>Phone</label><input type="tel" placeholder="(203) 555-0000"></div>
+        <div class="fg"><label>Town</label><input type="text" placeholder="New Haven, CT"></div>
+      </div>
+      <div class="form-row">
+        <div class="fg"><label>Project type</label>
+          <select>
+            <option value="" disabled selected>Select a service</option>
+            <option>Kitchen renovation</option>
+            <option>Bathroom remodel</option>
+            <option>Deck</option>
+            <option>Basement finish</option>
+            <option>General contracting</option>
+            <option>Commercial / other</option>
+          </select>
+        </div>
+        <div class="fg"><label>Timeline</label>
+          <select>
+            <option value="" disabled selected>When are you thinking?</option>
+            <option>ASAP</option>
+            <option>1–3 months</option>
+            <option>3–6 months</option>
+            <option>Just exploring</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn-terra" style="width:100%;padding:.9rem;">Send Request</button>
+      <div class="form-note">No pressure. Just a conversation.</div>
+    </form>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="inner">
+    <div class="svc-header reveal">
+      <div>
+        <div class="eyebrow">Services</div>
+        <h2 class="h2" style="margin-bottom:0">What we build.</h2>
+      <p class="lead">From a bathroom refresh to a full commercial build-out— every scope gets the same care.</p>
+    </div>
+    <div class="svc-grid reveal">
+      <div class="svc"><div class="svc-name">Kitchens</div><div class="svc-desc">Full gut renovations, cabinets, countertops, backsplash, and finish work. The most-used room in your home deserves to be done right.</div></div>
+      <div class="svc"><div class="svc-name">Bathrooms</div><div class="svc-desc">Custom tile, vanities, frameless glass showers, and full remodels. Waterproofed correctly. Finished to last.</div></div>
+      <div class="svc"><div class="svc-name">Decks</div><div class="svc-desc">New builds and rebuilds. Composite or pressure-treated. Designed to handle Connecticut seasons without complaint.</div></div>
+      <div class="svc"><div class="svc-name">Basements</div><div class="svc-desc">Framing, drywall, flooring, lighting, and egress. Turn underused space into finished square footage that adds real value.</div></div>
+      <div class="svc"><div class="svc-name">Commercial</div><div class="svc-desc">Retail fit-outs, accessibility ramps, and institutional work. Churches, businesses, and community spaces welcome.</div></div>
+      <div class="svc"><div class="svc-name">Consultations</div><div class="svc-desc">Walk the space with Mark. Honest feedback on scope, budget, and priorities. No charge. No pitch.</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- GALLERY -->
+<section class="gallery" id="work">
+  <div class="gallery-header reveal">
+    <div>
+      <div class="eyebrow">Our Work</div>
+      <h2 class="h2">Built to be seen.</h2>
+    </div>
+    <a href="#contact" style="display:inline-flex;align-items:center;gap:.5rem;font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(242,237,228,.45);text-decoration:none;border-bottom:1px solid rgba(242,237,228,.18);padding-bottom:2px;transition:color .2s,border-color .2s;margin-bottom:.5rem" onmouseover="this.style.color='var(--bg)';this.style.borderColor='rgba(242,237,228,.5)'" onmouseout="this.style.color='rgba(242,237,228,.45)';this.style.borderColor='rgba(242,237,228,.18)'">
+      Start a project
+      <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+    </a>
+  </div>
+  <div class="slideshow">
+<div class="slide active "><img src="assets/marble-tile-black-fixtures.jpg" alt="Marble tile &amp; black fixtures"><div class="slide-label"><div class="slide-cat">Bathroom</div><div class="slide-name">Marble tile &amp; black fixtures</div></div></div>
+<div class="slide "><img src="assets/granite-island-renovation.jpg" alt="Granite island renovation"><div class="slide-label"><div class="slide-cat">Kitchen</div><div class="slide-name">Granite island renovation</div></div></div>
+<div class="slide "><img src="assets/vanity-tile-detail.jpg" alt="Vanity &amp; tile detail"><div class="slide-label"><div class="slide-cat">Bathroom</div><div class="slide-name">Vanity &amp; tile detail</div></div></div>
+<div class="slide "><img src="assets/elevated-deck-new-haven-county.jpg" alt="Elevated deck &middot; New Haven County"><div class="slide-label"><div class="slide-cat">Deck</div><div class="slide-name">Elevated deck &middot; New Haven County</div></div></div>
+<div class="slide "><img src="assets/ada-accessibility-ramp.jpg" alt="ADA accessibility ramp"><div class="slide-label"><div class="slide-cat">Commercial</div><div class="slide-name">ADA accessibility ramp</div></div></div>
+
+    <div class="slide-controls">
+      <div class="slide-arrows">
+        <button class="sarr" id="sprev"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2L4 7l5 5"/></svg></button>
+        <button class="sarr" id="snext"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2l5 5-5 5"/></svg></button>
+      </div>
+      <div class="dots"><button class="dot active" data-index="0"></button><button class="dot " data-index="1"></button><button class="dot " data-index="2"></button><button class="dot " data-index="3"></button><button class="dot " data-index="4"></button><button class="dot " data-index="5"></button><button class="dot " data-index="6"></button></div>
+      <div class="slide-count"><span id="scur">1</span> / 7</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="inner contact-grid reveal">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2 class="h2">Let's talk about<br>your <em>project.</em></h2>
+      <p class="contact-intro">Serving New Haven and Fairfield County. Residential and commercial. Ready when you are.</p>
+      <div class="c-rows">
+        <div class="crow"><div class="crow-l">Phone</div><div class="crow-v">(203) 555-0100</div></div>
+        <div class="crow"><div class="crow-l">Email</div><div class="crow-v"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="afc2ceddc4efc2ceddc4cec1dbc7c0c1d6c7c681ccc0c2">[email&#160;protected]</a></div></div>
+        <div class="crow"><div class="crow-l">Hours</div><div class="crow-v">Mon–Sat, 7am–6pm</div></div>
+        <div class="crow"><div class="crow-l">License</div><div class="crow-v">CT HIC — Home Improvement Contractor</div></div>
+      </div>
+      <div class="areas">
+        <div class="areas-label">Service Area</div>
+        <div class="area-tags">
+          <span class="area-tag">New Haven</span><span class="area-tag">Milford</span><span class="area-tag">Orange</span><span class="area-tag">Shelton</span><span class="area-tag">Derby</span><span class="area-tag">Stratford</span><span class="area-tag">Bridgeport</span><span class="area-tag">Fairfield</span><span class="area-tag">Westport</span><span class="area-tag">Trumbull</span><span class="area-tag">Ansonia</span><span class="area-tag">West Haven</span>
+        </div>
+      </div>
+    </div>
+    <form style="display:flex;flex-direction:column;gap:1rem" onsubmit="return false">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.85rem">
+        <div class="fg"><label>First name</label><input type="text" placeholder="John"></div>
+        <div class="fg"><label>Last name</label><input type="text" placeholder="Smith"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.85rem">
+        <div class="fg"><label>Phone</label><input type="tel" placeholder="(203) 555-0000"></div>
+        <div class="fg"><label>Email</label><input type="email" placeholder="john@email.com"></div>
+      </div>
+      <div class="fg"><label>Project type</label>
+        <select><option value="" disabled selected>Select a service</option><option>Kitchen renovation</option><option>Bathroom remodel</option><option>Deck</option><option>Basement finish</option><option>General contracting</option><option>Commercial / retail</option><option>Church / institutional</option><option>Other / not sure yet</option></select>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.85rem">
+        <div class="fg"><label>Town / city</label><input type="text" placeholder="New Haven, CT"></div>
+        <div class="fg"><label>Timeline</label><select><option value="" disabled selected>When are you thinking?</option><option>ASAP</option><option>1–3 months</option><option>3–6 months</option><option>Just exploring</option></select></div>
+      </div>
+      <div class="fg"><label>Tell me about your project</label><textarea style="background:var(--bg);border:1px solid var(--fog);color:var(--ink);padding:.75rem 1rem;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:300;outline:none;transition:border-color .2s;width:100%;border-radius:0;resize:vertical;min-height:90px" placeholder="Scope, details, anything that helps..."></textarea></div>
+      <button type="submit" class="btn-dark" style="width:100%;padding:.9rem;">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot">
+    <div class="foot-logo">Mark <em>Anthony</em></div>
+    <div class="foot-links"><a href="#about">About</a><a href="#work">Work</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+    <div class="foot-copy">© 2026 Mark Anthony Home Improvement LLC</div>
+  </div>
+  <div class="foot-tag">The detail is the difference.</div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
