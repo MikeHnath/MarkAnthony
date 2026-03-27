@@ -39,6 +39,8 @@
 .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
 .nav-mobile-menu a {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
   font-size: 32px;
   font-weight: 300;
   color: var(--bg);
@@ -188,4 +190,69 @@
   .stat-num { font-size: clamp(48px, 14vw, 64px); }
 
   .svc-name { font-size: 20px; }
+}
+
+
+/* ── HERO HEIGHT + LANDSCAPE FIXES ──────────────────────────────
+   Prevents hero from overflowing short mobile screens and fixes
+   copy getting clipped in landscape orientation.
+─────────────────────────────────────────────────────────────────*/
+
+@media (max-width: 768px) {
+
+  /* Let hero shrink to fit content — never taller than the viewport */
+  .hero {
+    height: auto;
+    min-height: 100svh;
+    max-height: none;
+  }
+
+  /* Switch from bottom-anchored to vertically centered so
+     content is always visible regardless of screen height */
+  .hero-content {
+    position: relative;
+    justify-content: center;
+    padding: 7rem 1.5rem 3rem;  /* top pad clears the fixed nav */
+    min-height: 100svh;
+  }
+}
+
+/* Landscape phones — short viewport, needs most aggressive fixes */
+@media (max-width: 896px) and (orientation: landscape) {
+
+  .hero {
+    height: auto;
+    min-height: auto;
+  }
+
+  .hero-content {
+    position: relative;
+    justify-content: flex-start;
+    padding: 5.5rem 1.5rem 2rem;  /* enough to clear nav */
+    min-height: auto;
+  }
+
+  /* Scale headline right down so it fits */
+  .hero-h1 {
+    font-size: clamp(28px, 6vw, 42px);
+    margin-bottom: .75rem;
+  }
+
+  .hero-sub {
+    font-size: 13px;
+    margin-top: .75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-actions {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  /* Video still covers full area */
+  .hero-video,
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+  }
 }
