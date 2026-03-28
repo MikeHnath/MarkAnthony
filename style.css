@@ -89,7 +89,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 
 /* ── 1. INTAKE FORM — own row, centered, max 800px ── */
 .intake{background:var(--white);border-top:1px solid var(--lt);padding:5rem 2.5rem}
-.intake-inner{max-width:800px;margin:0 auto}
+.intake-inner{max-width:900px;margin:0 auto}
 .intake-head{text-align:center;margin-bottom:2.5rem}
 .intake-title{font-family:'Bebas Neue',serif;font-size:clamp(28px,3.5vw,42px);font-weight:300;letter-spacing:-.02em;color:var(--ink);margin-bottom:.5rem}
 .intake-title em{font-style:italic;color:var(--terra)}
@@ -99,7 +99,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .fg label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mist);font-weight:700}
 .fg input,.fg select,.fg textarea{background:var(--bg);border:1px solid var(--fog);color:var(--ink);padding:.75rem 1rem;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:300;outline:none;transition:border-color .2s;-webkit-appearance:none;width:100%;border-radius:0}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--terra);background:var(--white)}
-.fg input::placeholder,.fg textarea::placeholder{color:rgba(160,138,106,.4)}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--fog)}
 .fg select option{background:var(--white);color:var(--ink)}
 .fg-full{grid-column:1/-1}
 .form-note{font-size:12px;color:var(--fog);text-align:center;margin-top:.85rem;font-weight:300}
@@ -118,7 +118,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 /* GALLERY */
 .gallery{background:var(--ink);padding:0;overflow:hidden}
 .gallery-header{padding:4rem 2.5rem 2.5rem;display:flex;justify-content:space-between;align-items:flex-end;max-width:1080px;margin:0 auto}
-.gallery .eyebrow{color:rgba(192,168,130,.7)}
+.gallery .eyebrow{color:var(--gold);margin-bottom:0}
 .gallery .h2{color:var(--bg);margin-bottom:0}
 .slideshow{position:relative;height:800px;overflow:hidden}
 .slide{position:absolute;inset:0;opacity:0;transition:opacity .7s ease}
@@ -153,13 +153,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 /* FOOTER */
 footer{background:var(--ink);padding:2.5rem;border-top:1px solid rgba(255,255,255,.05)}
 .foot{max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.foot-logo{font-family:'Fraunces',serif;font-size:21px;font-weight:300;color:var(--bg)}
-.foot-logo em{font-style:italic;color:var(--terra)}
+.foot-logo{font-family:'Bebas Neue',serif;font: size 24px;;font-weight:300;color:var(--bg)}
+.foot-logo em{font-style:normal;color:var(--terra)}
 .foot-links{display:flex;gap:1.75rem}
 .foot-links a{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(242,237,228,.3);text-decoration:none;transition:color .2s}
 .foot-links a:hover{color:var(--bg)}
 .foot-copy{font-size:11px;color:rgba(242,237,228,.18);font-weight:300}
-.foot-tag{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:14px;color:rgba(242,237,228,.15);text-align:center;max-width:1080px;margin:.75rem auto 0;padding-top:.75rem;border-top:1px solid rgba(255,255,255,.05)}
+.foot-tag{font-family:'Bebas Neue',serif;font-style: normal;font-weight:300;font-size:14px;color:rgba(242,237,228,.15);text-align:center;max-width:1080px;margin:.75rem auto 0;padding-top:.75rem;border-top:1px solid rgba(255,255,255,.05)}
 
 /* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
@@ -167,9 +167,6 @@ footer{background:var(--ink);padding:2.5rem;border-top:1px solid rgba(255,255,25
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .75s ease,transform .75s ease}
 .reveal.visible{opacity:1;transform:none}
 
-.sepia-image {
-  -webkit-filter: sepia(100%) saturate(70%) contrast(95%) brightness(95%) hue-rotate(-10deg);
-  filter: sepia(100%) saturate(70%) contrast(95%) brightness(95%) hue-rotate(-10deg);
-  transition: filter .3s ease, -webkit-filter .3s ease;
-  will-change: filter;
+.about-img img {
+  filter: sepia(80%) hue-rotate(350deg) brightness(1) contrast(.9) saturate(.6);
 }
