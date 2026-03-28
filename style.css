@@ -26,8 +26,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-logo{font-family:'bebas neue',serif;font-size:28px;font-weight:300;color:var(--bg);letter-spacing:.01em}
 .nav-logo em{;color:var(--terra)}
 .nav-links{display:flex;gap:2rem}
-.nav-links a{font-size:14px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:rgba(242,237,228,.4);text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:var(--bg)}
+.nav-links a{font-size:14px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--bg);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--mist)}
 .nav-cta{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--bg);padding:.55rem 1.5rem;text-decoration:none;border-radius:10px;transition:background .2s}
 .nav-cta:hover{background:var(--fog)}
 
@@ -37,13 +37,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .hero-video video{width:100%;height:100%;object-fit:cover;object-position:left}
 .hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(26,20,16,.88) 0%,rgba(26,20,16,.5) 60%,rgba(26,20,16,.1) 100%)}
 .hero-content{position:absolute;z-index:2;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 2.5rem;max-width:700px;animation:fadeUp .9s .1s ease both}
-.hero-eyebrow{font-size:12px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:rgba(242,237,228,.45);margin-bottom:1.5rem}
+.hero-eyebrow{font-size:12px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--fog);margin-bottom:1.5rem}
 .hero-h1{font-family:'bebas neue',serif;font-size:clamp(52px,7vw,96px);font-weight:300;line-height:1.0;letter-spacing:-.02em;color:var(--white)}
 .hero-h1 em{font-style:italic;color:var(--terra)}
-.hero-sub{font-size:17px;font-weight:300;line-height:1.8;color:rgba(242,237,228,.55);max-width:440px;margin-top:1.5rem;margin-bottom:2.25rem}
+.hero-sub{font-size:17px;font-weight:300;line-height:1.8;color:var(--bg);max-width:440px;margin-top:1.5rem;margin-bottom:2.25rem}
 .hero-actions{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
-.hero-scroll{position:absolute;bottom:2rem;left:2.5rem;z-index:2;display:flex;align-items:center;gap:.75rem;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(242,237,228,.3)}
-.scroll-bar{width:1px;height:36px;background:rgba(242,237,228,.2);animation:scrollPulse 2s ease-in-out infinite}
+.hero-scroll{position:absolute;bottom:2rem;left:2.5rem;z-index:2;display:flex;align-items:center;gap:.75rem;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--fog);font-weight:400}
+.scroll-bar{width:1px;height:36px;background:var(--fog);animation:scrollPulse 2s ease-in-out infinite}
 
 /* BUTTONS — no border, medium weight, larger text */
 .btn-solid{display:inline-block;font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:var(--bg);padding:.85rem 2rem;text-decoration:none;border-radius:10px;border:none;transition:background .2s}
@@ -166,3 +166,10 @@ footer{background:var(--ink);padding:2.5rem;border-top:1px solid rgba(255,255,25
 @keyframes scrollPulse{0%,100%{opacity:.25}50%{opacity:.7}}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .75s ease,transform .75s ease}
 .reveal.visible{opacity:1;transform:none}
+
+.sepia-image {
+  -webkit-filter: sepia(100%) saturate(70%) contrast(95%) brightness(95%) hue-rotate(-10deg);
+  filter: sepia(100%) saturate(70%) contrast(95%) brightness(95%) hue-rotate(-10deg);
+  transition: filter .3s ease, -webkit-filter .3s ease;
+  will-change: filter;
+}

@@ -39,9 +39,9 @@
 .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
 .nav-mobile-menu a {
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-size: 32px;
+  font-family: 'Bebas Neue', serif;
+  font-style: normal;
+  font-size: 28px;
   font-weight: 300;
   color: var(--bg);
   text-decoration: none;
@@ -51,9 +51,9 @@
 
 .nav-mobile-cta {
   font-family: 'DM Sans', sans-serif !important;
-  font-style: normal !important;
+  text-transform:uppercase !important;
   font-size: 14px !important;
-  font-weight: 500 !important;
+  font-weight: 700 !important;
   letter-spacing: .1em !important;
   color: var(--ink) !important;
   background: var(--bg);
