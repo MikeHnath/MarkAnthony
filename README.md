@@ -52,6 +52,18 @@ A fully responsive, production-ready website across five sections:
 
 ---
 
+## Mobile Optimized
+
+Every section was purpose-built for mobile — not retrofitted after the fact:
+
+- Hero anchors to bottom on portrait, scales down on landscape
+- Services collapse from 3-col → 2-col → 1-col at defined breakpoints
+- About section stacks with image on top on mobile
+- Contact form goes single-column below 768px
+- Hamburger menu replaces nav entirely on tablet and phone
+ 
+---
+
 ## Design Decisions
 
 **Brand direction: Warm Editorial**  
@@ -94,12 +106,6 @@ MarkAnthony/
     ├── elevated-deck-new-haven-county.jpg
     └── ada-accessibility-ramp.jpg
 ```
-
----
-
-## Context
-
-Stonewater was the spark — a spec concept for the luxury outdoor living category built to open doors. Mark Anthony is the proof of concept — a real brand, a real contractor, a real pitch. Built under [THIS](https://github.com/MikeHnath), a boutique brand and growth consultancy serving SMBs across Fairfield County, CT.
 
 ---
 
