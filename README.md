@@ -7,25 +7,6 @@ Designed and developed by Michael Hnath — Brand & Growth Strategist at [THIS](
 
 🔗 **[Live demo →](https://mikehnath.github.io/MarkAnthony/)**
 
-### Mobile Preview
-
-> Scroll inside the phone to explore the full page.
-
-<div align="center">
-<table><tr><td align="center" style="background:#111;padding:40px;border-radius:12px;">
-
-
-<!-- Home indicator -->
-<div style="height:24px;background:#1a1a1a;border-radius:0 0 30px 30px;display:flex;align-items:center;justify-content:center;">
-<div style="width:100px;height:4px;background:rgba(255,255,255,.2);border-radius:2px;"></div>
-</div>
-
-</div>
-
-</td></tr></table>
-</div>
-
-
 ---
 
 ## The Brief
