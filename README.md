@@ -1,10 +1,9 @@
 # Mark Anthony Home Improvement
 
-📱 **[mobile preview →](https://mikehnath.github.io/MarkAnthony/phone_mockup.html)**
-
-
 **A brand identity and website concept for a Connecticut general contractor serving New Haven & Fairfield County.**  
 Designed and developed by Michael Hnath — Brand & Growth Strategist at [THIS](https://github.com/MikeHnath).
+
+![Mark Anthony Home Improvement](assets/mikehnath-github-MarkAnthony-preview.png)
 
 🔗 **[Live demo →](https://mikehnath.github.io/MarkAnthony/)**
 
